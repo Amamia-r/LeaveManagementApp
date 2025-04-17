@@ -46,11 +46,14 @@ docker-compose up –build
 ```
 
 3. **Access the API**
-Swagger UI: http://localhost:5123/swagger
+- Swagger UI: http://localhost:5123/swagger
+
+---
 
 ## 🧪 API Testing
 Import (LeaveRequests.postman_collection.json) into Postman to test all endpoints.
 
+---
 
 ## 🧠 Self-Review & Improvements
 
@@ -68,3 +71,9 @@ Import (LeaveRequests.postman_collection.json) into Postman to test all endpoint
 -	Add global error handling middleware
 -	Improve validation with FluentValidation
 -	Add CI/CD pipeline (GitHub Actions or Azure Pipelines)
+
+---
+
+## 👤 Author
+- Mamiantsa Rasoanaivo
+- GitHub: @amamia-r
