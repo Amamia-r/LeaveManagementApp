@@ -1,0 +1,263 @@
+{
+	"info": {
+		"_postman_id": "a65fd63f-d1eb-41a9-b81d-072fc8cbb6de",
+		"name": "LeaveRequests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40894306"
+	},
+	"item": [
+		{
+			"name": "GET all leave requests",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/LeaveRequests",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"LeaveRequests"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET one leave request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/leaverequests/3",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"leaverequests",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST a new leave request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"employeeId\": 2,\r\n  \"leaveType\": 1,     // Sick\r\n  \"startDate\": \"2024-10-01\",\r\n  \"endDate\": \"2024-10-03\",\r\n  \"reason\": \"Migraine attack\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/leaverequests",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"leaverequests"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Filter request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"keyword\": \"trip\",\r\n  \"leaveType\": 0,\r\n  \"status\": 0,\r\n  \"page\": 1,\r\n  \"pageSize\": 10\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/LeaveRequests/filter",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"LeaveRequests",
+						"filter"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Filter with Date Range",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"startDateFrom\": \"2024-07-01\",\r\n  \"startDateTo\": \"2024-08-01\",\r\n  \"page\": 1,\r\n  \"pageSize\": 10\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/leaverequests/filter",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"leaverequests",
+						"filter"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST: Get Summary Report",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"startDateFrom\": \"2024-01-01\",\r\n  \"startDateTo\": \"2024-12-31\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/leaverequests/report",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"leaverequests",
+						"report"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Admin Approval Endpoint",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/leaverequests/2/approve",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"leaverequests",
+						"2",
+						"approve"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT to update an existing request",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 4,\r\n  \"employeeId\": 2,\r\n  \"leaveType\": 2,     // Other\r\n  \"startDate\": \"2024-09-05\",\r\n  \"endDate\": \"2024-09-07\",\r\n  \"status\": 0,\r\n  \"reason\": \"Updated: conference travel\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/leaverequests/4",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"leaverequests",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE a leave request",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/leaverequests/7",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"leaverequests",
+						"7"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://localhost:5123",
+			"type": "string"
+		}
+	]
+}
