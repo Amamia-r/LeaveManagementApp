@@ -64,7 +64,6 @@ public class LeaveRequestRepository : ILeaveRequestRepository
     }
 
 
-    //  Filtering - Sorting - Pagination
     public async Task<List<LeaveRequest>> GetFilteredAsync(LeaveRequestFilterDto filter)
     {
         var query = _context.LeaveRequests
