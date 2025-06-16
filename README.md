@@ -48,6 +48,11 @@ docker-compose up –build
 3. **Access the API**
 - Swagger UI: http://localhost:5123/swagger
 
+- 📸 Swagger UI Preview
+
+  - ![Swagger UI Preview](./swagger-preview.png)
+  - ![Swagger UI Preview](./swagger-result-preview.png)
+
 ---
 
 ## 🧪 API Testing
